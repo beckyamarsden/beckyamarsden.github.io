@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+  
+  <!-- Metadata -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> About Us </title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="aboutstylesheet.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <script src="aboutjavascript.js"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoBLJIRmIsGidpHNQkzQotR6lXv0_BEKU&callback=myMap">
+    </script>
+  </head>
+
+  <!-- Header -->
+  <header>
+    <nav id="navbar"> 
+      <button id="navbutton" style="vertical-align: middle"><a href="index.html"><span>Home</span></a></button>
+      <button id="navbutton" style="vertical-align: middle"><a href="art.html"><span>Art</span></a></button> 
+      <button id="navbutton" style="vertical-align: middle"><a href="stationary.html"><span>Stationery</span></a></button>
+      <button id="navbutton" style="vertical-align: middle"><a href="habadashery.html"><span>Habadashery</span></a></button>
+      <button id="navbutton" style="vertical-align: middle"><a href="about.html"><span>About</span></a></button>
+      <div id="banner">
+        <div>
+          <span id="span"> We Deliver! Call us now on 01234 56789 </span>
+          <span id="span"> We Deliver! Call us now on 01234 56789 </span>
+        </div>
+      </div>
+    </nav>
+  </header>  
+
+  <body>
+    <main>
+      <!-- Meet the team - selfie gallery -->
+      <div>
+        <h1> Meet the Team </h1>
+      </div>
+      <div class="gallery">
+        <div class ="item">
+            <a href=".\Selfies\Bethan.jpg" target=_blank>
+                <img class="img" src=".\Selfies\Bethan.jpg" alt="Bethan">
+            </a>
+            <div class="desc">
+                <figcaption>Bethan Howells</figcaption>
+            </div>
+        </div>
+
+        <div class ="item">
+            <a href=".\Selfies\Becky.png" target=_blank>
+                <img class="img" src=".\Selfies\Becky.png" alt="Becky">
+            </a>
+            <div class="desc">
+                <figcaption>Becky Marsden</figcaption>
+            </div>
+        </div>
+
+        <div class ="item">
+            <a href=".\Selfies\Kitti.jpg" target=_blank>
+                <img class="img" src=".\Selfies\Kitti.jpg" alt="Kitti">
+            </a>
+            <div class="desc">
+                <figcaption>Kitti Mar</figcaption>
+            </div>
+        </div>
+      </div>
+
+      <!-- FAQ Section -->
+
+      <h1>Frequently Asked Questions</h1>
+      <button class="collapsible">Can I return my purchase?</button>
+      <div class="content">
+        <p>Yes, all products can be returned for a full refund within 28 days of purchase.</p>
+      </div>
+      <button class="collapsible">Do I have to pay for postage?</button>
+      <div class="content">
+        <p>All items orders over £30 will be posted free of charge. Below this, there is a standard fee of £4.99 for delivery.</p>
+      </div>
+      <button class="collapsible">Can I cancel my order?</button>
+      <div class="content">
+        <p>Under the United Kingdom’s Distance Selling Regulations you have the right to cancel your order and obtain a full refund. This is only possible if your order is still processing and has not been dispatched. All order cancelations must be sent to us via e-mail quoting your name, order number and full address. We can then cancel your order and refund you. If however your order has been dispatched you will need to return the order to us at your own expense.</p>
+      </div>
+      <button class="collapsible">Where is my order notification?</button>
+      <div class="content">
+        <p>As soon as you place an order, you will receive an email confirmation to the email address you entered on your order.  If for some reason, you did not receive an email, please check your spam folder or double check you entered your email address properly. If you still haven’t received it after 24 hours please contact customer services.</p>
+      </div>
+      <button class="collapsible">What payment methods do you accept?</button>
+      <div class="content">
+        <p>We accept most major credit or debit cards (except for AMEX) these include - Visa, Visa Electro, Master Card and UK Maestro.
+          We can also accept payment by PayPal. Please ensure you have sufficient funds in your account.</p>
+      </div>
+
+      <!-- Map and Address -->
+      <h1>Find Us</h1>
+      <span>
+        <ol class="finduslist">
+          <li class="findus">Address: Unit 5, Custard Factory, Gibb St, Birmingham B9 4AA</li>
+          <li class="findus">Phone: +44 (0) 1234 56789 10</li>
+          <li class="findus">Email: craftsupplies@teamflexbomb.co.uk</li>
+        </ol>
+        <div id="map" style="width:50%;height:400px;"></div>
+      </span>
+      
+      <!-- FAQ collapsible script -->
+
+      <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        }
+      </script>
+    </main>
+  </body>
+
+  <!-- Footer -->
+
+  <footer class="contact">
+    <article>
+      <h2>Our Store</h2>
+      <ul class="ourstore">
+       <li>Address: Custard Factory. Gibb St, Birmingham, B9 4AA</li>
+       <li>Phone Number: 01234 56789 10</li>
+       <li>Email Address: craftsupplies@teamflexbomb.co.uk</li>
+      </ul>
+    </article>
+    
+    <article>
+      <h2>Opening Hours</h2>
+       <ul class="ourstore">
+        <li>Monday: 9.00am - 5.00pm</li> 
+        <li>Wednesday: 9.00am - 5.00pm</li>
+        <li>Friday: 10.00 - 5.00pm</li> 
+       </ul>
+    </article>
+  </footer>
+
+  
+</html>
